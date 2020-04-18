@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
 import "./dummy-store";
+import Main from "./Main/Main";
 import Header from "./Header/Header";
 export default class App extends React.Component {
   state = {
