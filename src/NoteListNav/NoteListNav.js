@@ -29,7 +29,7 @@ export default function NoteListNav(props) {
           type="button"
           className="NoteListNav__add-folder-button"
         >
-          Folder
+          Add Folder
         </Button>
       </div>
     </div>

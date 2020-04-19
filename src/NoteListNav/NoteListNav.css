@@ -10,12 +10,17 @@
 }
 
 .NoteListNav__add-folder-button {
-  margin: 20px auto;
+  display: block;
+  font-size: 20px;
+  margin: 0 0 8px auto;
+  max-width: 180px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid black;
 }
 
 .NoteListNav__folder-link {
   display: block;
-  font-family: var(--custom-font);
   font-size: 20px;
   margin: 0 0 8px auto;
   max-width: 180px;
@@ -27,4 +32,9 @@
   display: block;
   float: right;
   font-size: 10px;
+}
+
+li {
+  border: 1px solid black;
+  margin: 10px;
 }
