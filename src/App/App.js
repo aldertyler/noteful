@@ -4,7 +4,7 @@ import NoteListNav from "../NoteListNav/NoteListNav";
 import NotePageNav from "../NotePageNav/NotePageNav";
 import NoteListMain from "../NoteListMain/NoteListMain";
 import NotePageMain from "../NotePageMain/NotePageMain";
-import dummyStore from "../dummy-store";
+// import dummyStore from "../dummy-store";
 import { getNotesForFolder, findNote, findFolder } from "../notes-helpers";
 import "./App.css";
 
@@ -15,8 +15,21 @@ class App extends Component {
   };
 
   componentDidMount() {
-    // fake date loading from API call
-    setTimeout(() => this.setState(dummyStore), 600);
+    fetch(`http://localhost:9090/folders`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((folders) => {
+        this.setState({ folders });
+      });
+    fetch(`http://localhost:9090/notes`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((notes) => {
+        console.log(notes);
+        this.setState({ notes });
+      });
   }
 
   renderNavRoutes() {
