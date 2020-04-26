@@ -1,68 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Moment from "react-moment";
-import ApiContext from "../ApiContext";
-import config from "../config";
-import "./Note.css";
 import PropTypes from "prop-types";
+import NoteContext from "../NoteContext";
+import Moment from "react-moment";
+import "./Note.css";
 
-export default class Note extends React.Component {
-  static defaultProps = {
-    onDeleteNote: () => {},
+class Note extends Component {
+  static contextType = NoteContext;
+
+  handleDeleteNote = () => {
+    this.context.deleteNote(this.props.id);
   };
-  static contextType = ApiContext;
-
-  handleClickDelete = (e) => {
-    e.preventDefault();
-    const noteId = this.props.id;
-    fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json",
-      },
-    })
-      .then((res) => {
-        if (!res.ok) return res.json().then((e) => Promise.reject(e));
-      })
-      .then(() => {
-        this.context.deleteNote(noteId);
-        this.props.onDeleteNote(noteId);
-      })
-      .catch((error) => {
-        console.error({ error });
-      });
-  };
-
   render() {
-    const { title, id, date_modified } = this.props;
+    let { name, id, modified } = this.props;
+    console.log(name);
+    console.log(id);
+    console.log(modified);
     return (
-      <div className="Note">
-        <h2 className="Note__title">
-          <Link to={`/note/${id}`}>{title}</Link>
-        </h2>
-        <button
-          className="Note__delete"
-          type="button"
-          onClick={this.handleClickDelete}
-        >
-          Delete{" "}
+      <div className="note">
+        <h1 className="title">
+          <Link to={`/note/${id}`}>{name}</Link>
+        </h1>
+        <p className="date">
+          Modified: <Moment>{modified}</Moment>
+        </p>
+        <button className="note-delete" onClick={this.handleDeleteNote}>
+          Delete
         </button>
-        <div className="Note__dates">
-          <div className="Note__dates-modified">
-            Modified: <Moment>{date_modified}</Moment>
-          </div>
-        </div>
       </div>
     );
   }
 }
 
 Note.propTypes = {
-  modified: PropTypes.string,
-  name: PropTypes.string,
+  value: PropTypes.string.isRequired,
 };
 
-Note.propTypes = {
-  modified: PropTypes.string,
-  name: PropTypes.string,
-};
+export default Note;

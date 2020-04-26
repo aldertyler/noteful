@@ -1,0 +1,28 @@
+.Note {
+  margin-left: 50px;
+  width: 70%;
+}
+
+.note-title {
+  font-size: x-large;
+}
+
+.goback {
+  margin-top: 20px;
+  margin-left: 100px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.link {
+  color: rgb(25, 25, 233);
+  text-decoration: none;
+  font-size: larger;
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.link:hover {
+  color: coral;
+}

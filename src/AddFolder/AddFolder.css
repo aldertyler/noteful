@@ -1,0 +1,21 @@
+.create-folder {
+  margin-left: 20px;
+}
+
+.folder-submit {
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+.back-folder-link {
+  color: black;
+  background: lightgrey;
+  text-decoration: none;
+  font-size: 1.5em;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.back-folder-div {
+  margin-top: 50px;
+}

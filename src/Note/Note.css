@@ -1,39 +1,13 @@
-.Note {
-  --note-height: 88px;
-  height: var(--note-height);
-  margin-bottom: 8px;
-  max-width: 380px;
-  padding: 8px 0 8px 8px;
-  position: relative;
+.note {
+  background-color: lightgrey;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
 }
 
-.Note__delete {
-  --note-button-height: 32px;
-  border: 0;
-  float: right;
-  font-size: 12px;
-  height: var(--note-button-height);
-  /* position: relative; */
-  top: calc((var(--note-button-height) + 32px) * -1);
-  transform-origin: right bottom;
-  /* transform: rotate(-90deg); */
-  width: calc(var(--note-height));
-  cursor: pointer;
-}
-
-.Note__title {
-  font-size: 20px;
-  margin: 0;
-  max-width: 80%;
-  min-height: 24px;
-}
-.Note__title a {
-  display: block;
-  text-decoration: none;
-}
-
-.Note__dates {
-  bottom: 8px;
-  font-size: 14px;
-  position: absolute;
+.note-delete {
+  padding: 5px;
+  margin: 2px 4px;
+  background: black;
+  color: white;
 }

@@ -1,21 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 
-class ErrorBoundary extends React.Component {
+class Error extends Component {
   constructor(props) {
     super(props);
     this.state = {
       hasError: false,
     };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFormError(error) {
     return { hasError: true };
   }
+
   render() {
     if (this.state.hasError) {
-      return <h2>Oops! Ghosts in the machine I guess.</h2>;
+      return <h2>Could not complete</h2>;
     }
     return this.props.children;
   }
 }
 
-export default ErrorBoundary;
+export default Error;
