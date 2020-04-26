@@ -3,7 +3,7 @@ import "./Header.css";
 
 class Header extends Component {
   render() {
-    return <div className="header">Noteful</div>;
+    return <div className="header">NOTEFUL</div>;
   }
 }
 

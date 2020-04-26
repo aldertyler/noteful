@@ -60,7 +60,7 @@ class AddFolder extends Component {
           </div>
           <div className="back-folder-div">
             <Link className="back-folder-link" to="/">
-              Go Back
+              Back
             </Link>
           </div>
         </form>

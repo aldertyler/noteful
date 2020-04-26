@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import STORE from '../dummy-store';
 import NoteContext from "../NoteContext";
 import { Link } from "react-router-dom";
 import ValidationError from "../Validation";

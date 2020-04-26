@@ -1,6 +1,5 @@
 import React from "react";
 import { Component, createContext } from "react";
-//import STORE from './dummy-store';
 import NoteContext from "../NoteContext";
 import { Link } from "react-router-dom";
 import "./NotePage.css";
@@ -12,8 +11,7 @@ class NoteDetail extends Component {
     let note = this.context.notes.filter((note) => {
       return note.id == this.props.match.params.noteId;
     });
-    //console.log(new Date(note[0].modified))
-    //let newDate = new Date(note[0].modified)
+
     return (
       <div>
         <div className="Note">
@@ -23,7 +21,7 @@ class NoteDetail extends Component {
         </div>
         <div className="goback">
           <Link className="link" to="/">
-            Go Back
+            Back
           </Link>
         </div>
       </div>

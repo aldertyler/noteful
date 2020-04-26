@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Notelist from "../Notelist/Notelist";
-//import STORE from '../dummy-store';
 import "./Mainpage.css";
 
 class Mainpage extends Component {

@@ -13,7 +13,7 @@ class Error extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <h2>Could not complete</h2>;
+      return <h2>Oops! Ghosts in the machine I guess?</h2>;
     }
     return this.props.children;
   }
