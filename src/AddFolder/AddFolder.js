@@ -2,7 +2,7 @@ import React from "react";
 import NotefulForm from "../NotefulForm/NotefulForm";
 import config from "../config";
 import ApiContext from "../ApiContext";
-import ValidationError from "../ValidationError";
+import ValidationError from "../ValidationError"; // validating user input
 import PropTypes from "prop-types";
 
 class AddFolder extends React.Component {
@@ -62,7 +62,7 @@ class AddFolder extends React.Component {
       <section className="AddFolder">
         <h2>Create a folder</h2>
         <NotefulForm onSubmit={this.handleFolderFormSubmit}>
-          <label htmlFor="folder-name">Name</label>
+          <label htmlFor="folder-name">Folder name</label>
           <input
             id="folder-name"
             type="text"
@@ -73,7 +73,7 @@ class AddFolder extends React.Component {
             <ValidationError message={this.validateFolderName()} />
           )}
           <button type="submit" disabled={this.validateFolderName()}>
-            Add Folder
+            Save
           </button>
         </NotefulForm>
       </section>

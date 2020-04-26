@@ -1,6 +1,5 @@
 import React from "react";
 import NotefulForm from "../NotefulForm/NotefulForm";
-
 import config from "../config";
 import ApiContext from "../ApiContext";
 import ValidationError from "../ValidationError";
@@ -134,7 +133,7 @@ class AddNote extends React.Component {
             type="submit"
             disabled={this.validateName() || this.validateFolderSelect()}
           >
-            Add Note
+            Save
           </button>
         </NotefulForm>
       </section>
